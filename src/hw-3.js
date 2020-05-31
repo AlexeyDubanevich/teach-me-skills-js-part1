@@ -11,7 +11,7 @@ function task1(str) {
     for(let i = 0; i < str.length - 1; i++){
         for(let j = i + 1 ; j < str.length; j++){
             if(str[i]===str[j]) {
-                check = false; break;
+                return false;
             }
         }
     }
@@ -26,7 +26,7 @@ function task2(str) {
     let result = '';
     let check = isNaN(Number(str));
     let check2 = null;
-    for(let i = 0; i < str.length; i++){
+
         if(check===false){
             check2 = "Букв нет";
         } else {
@@ -34,7 +34,7 @@ function task2(str) {
             result = str.replace(/[0-9]/g, '');
 
         }
-    }
+
     return result;
 }
 
@@ -73,10 +73,10 @@ function task5(str) {
     let name = arr[0];
     let surname = arr[1];
 
-    let first_initial = name[0];
-    let second_initial = surname[0];
+    let firstinitial = name[0];
+    let secondinitial = surname[0];
 
-    let result = first_initial + "." + second_initial + ".";
+    let result = firstinitial + "." + secondinitial + ".";
     return result;
 }
 
@@ -85,7 +85,7 @@ function task5(str) {
  * Примечание: написать эту логику без if и switch!!!!!!!
  */
 function task6(num) {
-    let arr = ["Меркурий", "Венера", "Земля",
+    let arr = ["", "Меркурий", "Венера", "Земля",
         "Марс","Юпитер","Сатурн","Уран","Нептун"];
     return arr[num];
 }

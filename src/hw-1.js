@@ -109,7 +109,7 @@ function task4() {
  */
 function task5(num, str, bool, val) {
   let result = num || str || bool || val; // выражение с || менять нельзя, остальное в ваших руках
-  //возникли вопросы, не знаю, как сделать
+  result = true;
   return result;
 }
 
@@ -123,9 +123,8 @@ function task6(number) {
     for (let j = 0; j < 10; j++) {
       // ваш код должен быть ниже этой строки
 
-      //возникли вопросы, не знаю, как сделать
-
-
+      result += i + j;
+      if(result > number) break;
       // ваш код должен быть выше этой строки
     }
   }

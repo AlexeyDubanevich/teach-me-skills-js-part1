@@ -46,12 +46,10 @@ function task2(num) {
 function task3(obj, property) {
     let result = null;
     // ваш код должен быть ниже этой строки
-    for(const key in obj){
-        if(obj[key] === obj[property]){
-            result = true;
-        } else {
-            result = false;
-        }
+    if(obj[property]){
+        result = true;
+    } else {
+        result = false;
     }
     // ваш код должен быть выше этой строки
     return result;
@@ -79,17 +77,10 @@ function task4(obj) {
 function task5(obj1, obj2) {
     let result = null;
     // ваш код должен быть ниже этой строки
-    let count1 = 0;
-    let count2 = 0;
-    for(const key in obj1){
-        if(obj1[key]) count++;
-    }
-    for(const key in obj2){
-        if(obj2[key]) count++;
-    }
+    let count1 = Object.keys(obj1);
+    let count2 = Object.keys(obj2);
 
-
-    if(count1>count2){
+    if(count1.length > count2.length){
         result = 1;
     } else{
         result = 2;
@@ -117,12 +108,10 @@ function task6(obj) {
  */
 function task7(obj) {
     // ваш код должен быть ниже этой строки
-    //не знаю, как сделать
+    console.log(Object.values(obj));
     // ваш код должен быть выше этой строки
 
-    for(/* написать условие */) {
-        console.log();
-    }
+
 }
 
 /**
@@ -154,10 +143,13 @@ function task8(obj, str) {
  * Задание с *.
  * Все аргументы функции должны добавляться в массив.
  */
-function task9(a,b,c) {
+function task9() {
     const array = [];
     // ваш код должен быть ниже этой строки
+    for(let i=0 ; i< arguments.length; i++){
+        array[i]=arguments[i]
 
+    }
     // ваш код должен быть выше этой строки
     return array;
 }
